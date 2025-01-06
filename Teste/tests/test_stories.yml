@@ -1,0 +1,59 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+test_stories:
+
+  - story: Saudação e coleta de nome
+    steps:
+      - intent: saudacao
+      - action: action_ask_nome
+      - intent: informacao_nome
+        entities:
+          - nome: "João"
+      - action: action_ask_servico
+
+  - story: Reclamação e resolução
+    steps:
+      - intent: reclamacao
+      - action: action_agradecer_reclamacao
+      - action: action_sugerir_solucao
+
+  - story: Agendamento de consulta
+    steps:
+      - intent: saudacao
+      - action: action_ask_nome
+      - intent: informacao_nome
+        entities:
+          - nome: "Maria"
+      - action: action_ask_servico
+      - intent: informacao_servico
+        entities:
+          - servico: "consulta dermatológica"
+      - action: action_ask_data
+      - intent: informacao_data
+        entities:
+          - data: "amanhã"
+
+  - story: Cancelamento de agendamento
+    steps:
+      - intent: saudacao
+      - action: action_ask_nome
+      - intent: informacao_nome
+        entities:
+          - nome: "Lucas"
+      - action: action_ask_servico
+      - intent: informacao_servico
+        entities:
+          - servico: "consulta odontológica"
+      - action: action_ask_data
+      - intent: informacao_data
+        entities:
+          - data: "terça-feira"
+
+  - story: Reclamação e solicitação de suporte
+    steps:
+      - intent: reclamacao
+      - action: action_agradecer_reclamacao
+      - action: action_oferecer_suporte
+      - intent: saudacao
+      - action: action_agradecer_saudacao

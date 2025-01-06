@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - reclamacao
+  - agendar_consulta
+  - cancelar_consulta
+  - obter_informacao
+  - confirmar_agendamento
+  - alterar_agendamento
+  - obter_lista_servicos
+
+entities:
+  - pessoa
+  - hora
+  - data
+  - local
+
+slots:
+  pessoa:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: pessoa
+
+  hora:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: hora
+
+  data:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: data
+
+  local:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: local
+
+
+responses:
+  utter_saudacao:
+    - text: "Olá! Como posso ajudá-lo hoje?"
+  utter_reclamacao:
+    - text: "Sinto muito por saber disso. O que posso fazer para melhorar sua experiência?"
+  utter_confirmacao_agendamento:
+    - text: "Sua consulta foi agendada com sucesso."
+  utter_cancelamento:
+    - text: "Sua consulta foi cancelada."
+  utter_informacao_servico:
+    - text: "Aqui estão os serviços disponíveis na clínica."
+
+actions:
+  - action_agradecer
+

@@ -1,0 +1,12 @@
+version: "3.1"
+
+stories:
+  - story: saudacao
+    steps:
+      - intent: saudacao
+      - action: utter_saudacao
+
+  - story: reclamacao
+    steps:
+      - intent: reclamacao
+      - action: utter_reclamacao

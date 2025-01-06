@@ -1,0 +1,57 @@
+nlu:
+  - intent: saudacao
+    examples: |
+      - Olá
+      - Oi
+      - Bom dia
+      - Boa tarde
+      - Como vai?
+      - E aí, tudo bem?
+
+  - intent: reclamacao
+    examples: |
+      - Eu não gostei do atendimento
+      - Estou insatisfeito com o serviço
+      - O atendimento foi péssimo
+      - A consulta demorou demais
+      - Estou muito frustrado com o serviço
+
+  - intent: agendar_consulta
+    examples: |
+      - Eu gostaria de agendar uma consulta com a [Dra. Ana](pessoa) amanhã às [10h](hora)
+      - Quero marcar uma consulta para [segunda-feira](data) na [Clínica Saúde Total](local)
+      - Marque para [próxima sexta-feira](data) às [14h](hora)
+      - Agende uma consulta com [João Silva](pessoa) na [Clínica Bem Estar](local) para [terça-feira](data)
+      - Marcar uma consulta com a [Dra. Maria](pessoa) amanhã às [9h](hora)
+  
+  - intent: cancelar_consulta
+    examples: |
+      - Quero cancelar minha consulta marcada com a [Dra. Ana](pessoa)
+      - Preciso cancelar a consulta para [segunda-feira](data) com o [Dr. João](pessoa)
+      - Cancelar consulta marcada para [amanhã](data)
+      - Eu gostaria de cancelar a consulta na [Clínica Saúde Total](local)
+
+  - intent: obter_informacao
+    examples: |
+      - Qual é o horário de funcionamento da [Clínica Saúde Total](local)?
+      - Você pode me informar o endereço da [Clínica Bem Estar](local)?
+      - Onde fica a [Clínica Saúde Total](local)?
+      - Qual o telefone da [Clínica Bem Estar](local)?
+
+  - intent: confirmar_agendamento
+    examples: |
+      - Está confirmado meu agendamento com a [Dra. Ana](pessoa) amanhã às [10h](hora)?
+      - A consulta marcada para [segunda-feira](data) com [Dra. Maria](pessoa) está confirmada?
+      - Confirme minha consulta para [terça-feira](data) na [Clínica Saúde Total](local) às [14h](hora)
+
+  - intent: alterar_agendamento
+    examples: |
+      - Eu gostaria de alterar a consulta com [João Silva](pessoa) para [quinta-feira](data) às [15h](hora)
+      - Mudar a consulta marcada para [quarta-feira](data) para [Dra. Maria](pessoa)
+      - Quero alterar o horário da consulta para [amanhã](data) às [11h](hora)
+      
+  - intent: obter_lista_servicos
+    examples: |
+      - Quais serviços estão disponíveis na [Clínica Bem Estar](local)?
+      - O que posso fazer na [Clínica Saúde Total](local)?
+      - Quais são os tipos de consulta oferecidos na [Clínica Saúde Total](local)?

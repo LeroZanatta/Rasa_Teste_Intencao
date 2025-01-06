@@ -1,0 +1,19 @@
+version: "2.0"
+
+language: "pt"
+
+pipeline:
+- name: "SpacyNLP"
+- name: "SpacyTokenizer"
+- name: "RegexEntityExtractor"
+- name: "CRFEntityExtractor"
+- name: "DIETClassifier"
+- name: "EntitySynonymMapper"
+- name: "ResponseSelector"
+- name: "FallbackClassifier"
+
+policies:
+- name: "RulePolicy"
+- name: "MemorizationPolicy"
+- name: "TEDPolicy"
+assistant_id: 20250106-092524-drab-nectar
